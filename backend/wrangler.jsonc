@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "vidora-backend",
+  "main": "src/index.js",
+  "compatibility_date": "2025-07-15",
+  "vars": {
+    "ENVIRONMENT": "development",
+    "ALLOWED_ORIGINS": "http://localhost:3000,http://127.0.0.1:3000",
+    "ALLOWED_TIKTOK_HOSTS": "tiktok.com,www.tiktok.com,m.tiktok.com,vm.tiktok.com,vt.tiktok.com",
+    "MAX_REQUEST_BYTES": "8192",
+    "MEDIA_PROVIDER": "none"
+  },
+  "env": {
+    "production": {
+      "vars": {
+        "ENVIRONMENT": "production",
+        "ALLOWED_ORIGINS": "",
+        "ALLOWED_TIKTOK_HOSTS": "tiktok.com,www.tiktok.com,m.tiktok.com,vm.tiktok.com,vt.tiktok.com",
+        "MAX_REQUEST_BYTES": "8192",
+        "MEDIA_PROVIDER": "none"
+      }
+    }
+  }
+}
